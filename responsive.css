@@ -1,0 +1,6 @@
+@media (min-width: 1200px) and (max-width: 1399px){
+    .services-slide-1{
+        align-items: end;
+        padding: 0 0 4rem;
+    }
+}
