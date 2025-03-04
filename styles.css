@@ -400,6 +400,15 @@ section {
     position: relative;
 }
 
+.content {
+    position: absolute;
+    top: 13%; 
+    left: 38%; 
+    color: rgba(193, 19, 19, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+}
+
 .img1{
     max-width: 448px; 
     max-height: 742px;
@@ -421,6 +430,75 @@ section {
     display: inline-block;
     flex-shrink: 0;
 }
+
+.about-preview .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.about-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.about-content {
+    width: 40%;
+}
+
+.cards-container {
+    display: flex;
+    gap: 10px;
+    width: 70%;
+}
+
+.card {
+    background: linear-gradient(135deg, #0080ff, #004080);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 240px;
+    max-width: 350px;
+    height: 400px;
+}
+
+.card i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-left: 2px;
+}
+
+.card p {
+    font-size: 14px;
+    flex-direction: column;
+    max-width: 90%;
+    align-items: center;
+    margin-left: 2px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
 .services-content h4{
     margin-left: 50%;
     /* margin-top: 10% */
@@ -623,12 +701,27 @@ section {
   }
 
 /* About Preview */
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+.about-preview .container {
+    display: flex;
     align-items: center;
-} 
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.about-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.about-content {
+    width: 40%;
+}
+
+
 
 .mission-box{ 
     text-align: center;
@@ -645,6 +738,10 @@ section {
     color: #000;
     text-align: center;
     margin-left: 3px;
+}
+
+.about-content {
+    width: 100%;
 }
 
 .about-content h2 {

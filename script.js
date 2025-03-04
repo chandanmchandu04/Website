@@ -200,3 +200,33 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     */
 });
+
+let currentIndex = 1;
+const images = document.querySelectorAll(".image");
+const texts = ["Content for Image 1", "Content for Image 2", "Content for Image 3"];
+const textElement = document.querySelector(".text");
+const dots = document.querySelectorAll(".dot");
+
+function showSlide(index) {
+    if (index >= images.length) currentIndex = 0;
+    else if (index < 0) currentIndex = images.length - 1;
+    else currentIndex = index;
+
+    images.forEach((img, i) => img.style.display = i === currentIndex ? "block" : "none");
+    textElement.innerText = texts[currentIndex];
+
+    // Update dots
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[currentIndex].classList.add("active");
+}
+
+function changeSlide(direction) {
+    showSlide(currentIndex + direction);
+}
+
+function goToSlide(index) {
+    showSlide(index);
+}
+
+// Initialize first slide
+showSlide(currentIndex);
